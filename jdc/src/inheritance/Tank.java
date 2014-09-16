@@ -34,4 +34,8 @@ public class Tank {
 	public String toString() {
 		return this.getColor() + " " + this.getCrew() + " " + this.getMaxSpeed();
 	}
+	
+	public String move() {
+		return "The tank is moving";
+	}
 }
