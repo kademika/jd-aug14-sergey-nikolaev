@@ -9,7 +9,7 @@ public class Deposit {
 			int balance = 0;
 			int month = 0;
 			while(balance < dreamSum) {
-				balance += monthlyPayment + balance * (interest / 1200);
+				balance += monthlyPayment + balance * (interest / 1200d);
 				month++;
 			}
 			return month / 12 + " years and " + month % 12 + " months";
