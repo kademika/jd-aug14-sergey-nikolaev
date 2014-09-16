@@ -21,6 +21,9 @@ public class Launcher {
 		System.out.println(t1.toString());
 		System.out.println(t2.toString());
 		System.out.println(t3.toString());
+		System.out.println();
+		System.out.println(t1.move());
+		
 	}
 
 }
