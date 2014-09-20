@@ -1,19 +1,19 @@
 package tanks;
 
 public class Tank {
-	private int speed = 10;
+	protected int speed = 10;
 	private int x;
 	private int y;
-	private int direction;
+	private Direction direction;
 
 	private BattleField bf;
 	private ActionField af;
 
 	public Tank(ActionField af, BattleField bf) {
-		this(af, bf, 128, 512, 1);
+		this(af, bf, 128, 512, Direction.UP);
 	}
 
-	public Tank(ActionField af, BattleField bf, int x, int y, int direction) {
+	public Tank(ActionField af, BattleField bf, int x, int y, Direction direction) {
 		this.af = af;
 		this.bf = bf;
 		this.x = x;
@@ -21,7 +21,7 @@ public class Tank {
 		this.direction = direction;
 	}
 
-	void turn(int direction) throws Exception {
+	void turn(Direction direction) throws Exception {
 		this.direction = direction;
 		af.processTurn(this);
 	}
@@ -67,7 +67,12 @@ public class Tank {
 		return y;
 	}
 
-	public int getDirection() {
+	public Direction getDirection() {
 		return direction;
+	}
+	
+	public void destroy() {
+		x = -100;
+		y = -100;
 	}
 }

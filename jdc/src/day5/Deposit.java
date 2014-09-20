@@ -3,7 +3,7 @@ package day5;
 public class Deposit {
 
 	public static void main(String[] args) {
-		System.out.println(darkZone(100, 12, 1000000));
+		System.out.println(darkZone(1000, 12, 1000000));
 	}
 		public static String darkZone(int monthlyPayment, int interest, int dreamSum) {
 			int balance = 0;
